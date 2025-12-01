@@ -8,17 +8,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Padding="20" Spacing="12">
-        <TextBox
-            PlaceholderText="Title"
-            Text="{Binding Title, Mode=TwoWay}" />
+    <Grid Padding="20" RowDefinitions="Auto,*,Auto" ColumnDefinitions="*">
+        <StackPanel Spacing="4" Grid.Row="0">
+            <TextBlock Text="Title" FontWeight="SemiBold" />
+            <TextBox
+                PlaceholderText="Enter note title"
+                Text="{Binding Title, Mode=TwoWay}"
+                Margin="0,4,0,12" />
+        </StackPanel>
 
-        <TextBox
-            PlaceholderText="Content"
-            Text="{Binding Content, Mode=TwoWay}" />
+        <StackPanel Spacing="4" Grid.Row="1">
+            <TextBlock Text="Content" FontWeight="SemiBold" />
+            <TextBox
+                PlaceholderText="Write your note here..."
+                Text="{Binding Content, Mode=TwoWay}"
+                AcceptsReturn="True"
+                TextWrapping="Wrap"
+                VerticalAlignment="Stretch"
+                Height="200"
+                Margin="0,4,0,12" />
+        </StackPanel>
 
         <Button
+            Grid.Row="2"
             Content="Save Note"
-            Command="{Binding SaveCommand}" />
-    </StackPanel>
+            Command="{Binding SaveCommand}"
+            HorizontalAlignment="Right"
+            Width="120"
+            Margin="0,12,0,0" />
+    </Grid>
 </Page>

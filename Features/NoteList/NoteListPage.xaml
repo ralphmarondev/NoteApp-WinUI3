@@ -10,19 +10,42 @@
     mc:Ignorable="d">
 
     <Grid Padding="20">
-        <ListView ItemsSource="{Binding Notes}">
+        <ListView ItemsSource="{Binding Notes}"
+                  IsItemClickEnabled="True"
+                  SelectionMode="None">
+
+            <!-- Flow layout -->
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal"
+                                   ItemWidth="250" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Note">
-                    <StackPanel Spacing="4">
-                        <TextBlock Text="{x:Bind Title}"
-                                   FontSize="18"
-                                   FontWeight="SemiBold" />
-                        <TextBlock Text="{x:Bind Content}"
-                                   TextWrapping="Wrap" />
-                        <TextBlock Text="{x:Bind CreatedAt}"
-                                   FontSize="12"
-                                   Foreground="Gray" />
-                    </StackPanel>
+                    <!-- Card container -->
+                    <Border Background="{ThemeResource SystemAltHighColor}"
+                            CornerRadius="8"
+                            Padding="12"
+                            Margin="8">
+                        <StackPanel Spacing="6">
+                            <!-- Title -->
+                            <TextBlock Text="{x:Bind Title}"
+                                       FontSize="18"
+                                       FontWeight="SemiBold"
+                                       TextWrapping="Wrap" />
+                            <!-- Content -->
+                            <TextBlock Text="{x:Bind Content}"
+                                       TextWrapping="Wrap"
+                                       Foreground="Gray" />
+                            <!-- Date -->
+                            <TextBlock Text="{x:Bind CreatedAt}"
+                                       FontSize="12"
+                                       Foreground="DarkGray"
+                                       HorizontalAlignment="Right" />
+                        </StackPanel>
+                    </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
