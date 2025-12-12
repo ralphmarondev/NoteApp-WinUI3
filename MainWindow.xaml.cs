@@ -12,8 +12,8 @@ namespace NoteApp
         {
             InitializeComponent();
 
-            WindowHelper.SetSize(this, 1000, 700);
-            WindowHelper.SetMinSize(this, 800, 600);
+            WindowHelper.SetSize(this, 1200, 700);
+            WindowHelper.SetMinSize(this, 1200, 700);
             WindowHelper.CenterOnScreen(this);
 
             ContentFrame.Navigate(typeof(NoteListPage));
