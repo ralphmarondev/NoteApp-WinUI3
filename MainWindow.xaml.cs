@@ -11,11 +11,11 @@ namespace NoteApp
         public MainWindow()
         {
             InitializeComponent();
-            
+
             WindowHelper.SetSize(this, 1000, 700);
             WindowHelper.SetMinSize(this, 800, 600);
             WindowHelper.CenterOnScreen(this);
-            
+
             ContentFrame.Navigate(typeof(NoteListPage));
         }
 

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.Data.Sqlite;
+using NoteApp.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.Data.Sqlite;
-using NoteApp.Core.Models;
 
 namespace NoteApp.Core.Services;
 

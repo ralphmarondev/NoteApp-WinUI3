@@ -1,7 +1,7 @@
-﻿using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using NoteApp.Core.Models;
 using NoteApp.Core.Services;
+using System.Collections.ObjectModel;
 
 namespace NoteApp.Features.NoteList;
 

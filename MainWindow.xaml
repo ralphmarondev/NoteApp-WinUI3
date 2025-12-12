@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <Window
-    x:Class="NoteApp.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Title="NoteApp">
+	x:Class="NoteApp.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="NoteApp"
+	mc:Ignorable="d">
 
-    <Window.SystemBackdrop>
-        <MicaBackdrop />
-    </Window.SystemBackdrop>
+	<Window.SystemBackdrop>
+		<MicaBackdrop />
+	</Window.SystemBackdrop>
 
-    <NavigationView
-        x:Name="NavView"
-        PaneDisplayMode="Left"
-        IsBackButtonVisible="Collapsed"
-        IsSettingsVisible="False"
-        SelectionChanged="NavView_OnSelectionChanged">
+	<NavigationView
+		x:Name="NavView"
+		IsBackButtonVisible="Collapsed"
+		IsSettingsVisible="False"
+		PaneDisplayMode="Left"
+		SelectionChanged="NavView_OnSelectionChanged">
 
-        <NavigationView.MenuItems>
-            <NavigationViewItem
-                Content="Notes"
-                Icon="Document"
-                Tag="NoteListPage" />
-            <NavigationViewItem
-                Content="New Note"
-                Icon="Add"
-                Tag="NewNotePage" />
-        </NavigationView.MenuItems>
+		<NavigationView.MenuItems>
+			<NavigationViewItem
+				Content="Notes"
+				Icon="Document"
+				Tag="NoteListPage" />
+			<NavigationViewItem
+				Content="New Note"
+				Icon="Add"
+				Tag="NewNotePage" />
+		</NavigationView.MenuItems>
 
-        <Frame x:Name="ContentFrame" />
-    </NavigationView>
+		<Frame x:Name="ContentFrame" />
+	</NavigationView>
 </Window>

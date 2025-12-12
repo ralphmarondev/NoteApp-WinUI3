@@ -1,9 +1,9 @@
-﻿using System;
-using Windows.Graphics;
-using Microsoft.UI;
+﻿using Microsoft.UI;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
+using System;
+using Windows.Graphics;
 using WinRT.Interop;
 
 namespace NoteApp.Core.Helper;

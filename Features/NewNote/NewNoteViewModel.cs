@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using NoteApp.Core.Models;
 using NoteApp.Core.Services;
+using System;
+using System.Threading.Tasks;
 
 namespace NoteApp.Features.NewNote;
 
